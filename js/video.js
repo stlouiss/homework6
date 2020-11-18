@@ -8,6 +8,7 @@ window.addEventListener("load", function() {
 
 document.querySelector("#play").addEventListener("click", function() {
 	console.log("Play Video");
+	volume.innerHTML = "100%";
 	video.play();
 });
 
@@ -65,7 +66,7 @@ document.querySelector("#volumeSlider").addEventListener("click", function() {
 	max="100"; 
 	value="100"; 
 	step="10";
-	volume.innerHTML = (volumeSlider.value).concat("%");
+	volume.innerHTML = volumeSlider.value.concat("%");
 	video.volume = volumeSlider.value / 100;
 });
 
